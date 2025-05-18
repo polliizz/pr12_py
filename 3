@@ -1,0 +1,7 @@
+import random
+числа = [random.randint(1, 50) for _ in range(100)]
+повтори = {}
+for n in числа:
+    повтори[n] = повтори.get(n, 0) + 1
+найбільше = max(повтори.items(), key=lambda x: x[1])
+print(f"Найчастіше число: {найбільше[0]}")
